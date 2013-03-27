@@ -37,7 +37,7 @@ hash_ring = None
 def set_up_hash_ring_ctypes():
     global hash_ring
     try:
-        hash_ring = ctypes.cdll.LoadLibrary('libhashring.so')
+        hash_ring = ctypes.cdll.LoadLibrary('/usr/local/lib/libhashring.so')
     except OSError:
         try:
             hash_ring = ctypes.cdll.LoadLibrary('libhashring.dylib')
